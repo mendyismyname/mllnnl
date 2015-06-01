@@ -1,0 +1,10 @@
+<div class="jumbotron">
+      <h1>Home Page
+        {?home}<small class="pull-right">Visit Count: {home}</small>{/home}
+      </h1>
+      <p class="lead">This is the home page. Its actually a dust partial which will be replaced when we navigate away from the page. Only this partial will change while the rest of the page will not be reloaded. SPA Magic!</p>
+      <p>
+        <a class="btn btn-lg btn-success" href="http://linkedin.github.io/dustjs/" target="_blank" role="button">Check out DustJS</a>
+        <a class="btn btn-lg btn-warning pull-right" href="http://sailsjs.org" target="_blank" role="button">Check out SailsJS</a>
+      </p>
+    </div>

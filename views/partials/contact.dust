@@ -1,0 +1,14 @@
+ <div class="well">
+      <h1 class="align-center">Show us some love and we'll get back to you !
+        {?contact}<small class="pull-right">Visit Count: {contact}</small>{/contact}
+      </h1>
+      <hr/>
+      <div class="input-group input-group-lg">
+        <span class="input-group-addon" id="basic-addon1">@</span>
+        <input type="text" class="form-control" placeholder="Email" aria-describedby="basic-addon1">
+      </div>
+      <br/>
+      <p>
+      <a class="btn btn-lg btn-success" href="#" role="button">Send Contact</a>
+      </p>
+    </div>
