@@ -1,0 +1,306 @@
+@font-face {
+    font-family: pixel;
+    src: url(pixelmix.ttf);
+}
+
+
+.error{
+  text-align: center;
+  width: 500px;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left:0;
+  right: 0;
+  -webkit-animation: noise 1s linear infinite;
+          animation: noise 1s linear infinite;
+  overflow: default;
+      -webkit-transition: all 0.1s ease-in-out;
+    -moz-transition: all 0.1s ease-in-out;
+    -o-transition: all 0.1s ease-in-out;
+    -ms-transition: all 0.1s ease-in-out;
+    transition: all 0.1s ease-in-out;
+}
+
+.error:after {
+  content: url("img/mllnnl_red.png");
+  text-align: center;
+  width: 670px;
+  height: 300px;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left:0;
+  right: 0;
+  -webkit-animation: noise-1 1s linear infinite;
+          animation: noise-1 1s linear infinite;
+}
+
+.error:before {
+  content: url("img/mllnnl_blue.png");
+  text-align: center;
+  width: 800px;
+  height: 200px;
+  line-height: 100px;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left:0;
+  right: 0;
+  -webkit-animation: noise-2 1s linear infinite;
+          animation: noise-2 1s linear infinite;
+}
+
+@-webkit-keyframes noise-1 {
+  0%, 20%, 40%, 60%, 70%, 90% {
+    opacity: 0;
+  }
+  10% {
+    opacity: .1;
+  }
+  50% {
+    opacity: .5;
+    left: -6px;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: .6;
+    left: 2px;
+  }
+}
+
+@keyframes noise-1 {
+  0%, 20%, 40%, 60%, 70%, 90% {
+    opacity: 0;
+  }
+  10% {
+    opacity: .1;
+  }
+  50% {
+    opacity: .5;
+    left: -6px;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: .6;
+    left: 2px;
+  }
+}
+@-webkit-keyframes noise-2 {
+  0%, 20%, 40%, 60%, 70%, 90% {
+    opacity: 0;
+  }
+  10% {
+    opacity: .1;
+  }
+  50% {
+    opacity: .5;
+    left: 6px;
+  }
+  80% {
+    opacity: .3;
+  }
+  100% {
+    opacity: .6;
+    left: -2px;
+  }
+}
+@keyframes noise-2 {
+  0%, 20%, 40%, 60%, 70%, 90% {
+    opacity: 0;
+  }
+  10% {
+    opacity: .1;
+  }
+  50% {
+    opacity: .5;
+    left: 6px;
+  }
+  80% {
+    opacity: .3;
+  }
+  100% {
+    opacity: .6;
+    left: -2px;
+  }
+}
+@-webkit-keyframes noise {
+  0%, 3%, 5%, 42%, 44%, 100% {
+    opacity: 1;
+    -webkit-transform: scaleY(1);
+            transform: scaleY(1);
+  }
+  4.3% {
+    opacity: .5;
+    -webkit-transform: scaleY(1.2);
+            transform: scaleY(1.2);
+  }
+  43% {
+    opacity: 1;
+    -webkit-transform: scaleX(1.1);
+            transform: scaleX(1.1);
+  }
+}
+@keyframes noise {
+  0%, 3%, 5%, 42%, 44%, 100% {
+    opacity: 1;
+    -webkit-transform: scaleY(1);
+            transform: scaleY(1);
+  }
+  4.3% {
+    opacity: .2;
+    -webkit-transform: scaleY(1.1);
+            transform: scaleY(1.1);
+  }
+  43% {
+    opacity: 1;
+    -webkit-transform: scaleX(1.2);
+            transform: scaleX(1.2);
+  }
+}
+@-webkit-keyframes noise-3 {
+  0%,3%,5%,42%,44%,100% {
+    opacity: .5;
+    -webkit-transform: scaleY(1);
+            transform: scaleY(1);
+  }
+  4.3% {
+    opacity: 1;
+    -webkit-transform: scaleY(1.2);
+            transform: scaleY(4);
+  }
+  43% {
+    opacity: .1;
+    -webkit-transform: scaleX(10) rotate(60deg);
+            transform: scaleX(10) rotate(60deg);
+  }
+}
+@keyframes noise-3 {
+  0%,3%,5%,42%,44%,100% {
+    opacity: .5;
+    -webkit-transform: scaleY(1);
+            transform: scaleY(1);
+  }
+  4.3% {
+    opacity: 1;
+    -webkit-transform: scaleY(1.2);
+            transform: scaleY(1.2);
+  }
+  43% {
+    opacity: 1;
+    -webkit-transform: scaleX(10) rotate(60deg);
+            transform: scaleX(10) rotate(60deg);
+  }
+}
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+}
+
+body {
+  background: black;
+}
+
+@-webkit-keyframes animatedBackground {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 100% 0;
+  }
+}
+
+@keyframes animatedBackground {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 100% 0;
+  }
+}
+.flex-container {
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#dot {
+  background-color: rgba(255, 255, 255, 0.15);
+  border: 0 solid transparent;
+  -webkit-transition: border-top-width 0.5s ease, border-left-width 0.5s ease  0.25s, border-bottom-width 0.5s ease, border-right-width 0.5s ease 0.25s, border-color 1s ease 0.75s;
+          transition: border-top-width 0.5s ease, border-left-width 0.5s ease  0.25s, border-bottom-width 0.5s ease, border-right-width 0.5s ease 0.25s, border-color 1s ease 0.75s;
+}
+#dot.active {
+  -webkit-animation: animatedBackground 0.2s linear infinite;
+          animation: animatedBackground 0.2s linear infinite;
+  border-color: black;
+  border-width: 1000px;
+  -webkit-transition: border-top-width 0.5s ease 0.5s, border-left-width 0.5s ease  0.75s, border-bottom-width 0.5s ease 0.5s, border-right-width 0.5s ease 0.75s, border-color 0.5s ease;
+          transition: border-top-width 0.5s ease 0.5s, border-left-width 0.5s ease  0.75s, border-bottom-width 0.5s ease 0.5s, border-right-width 0.5s ease 0.75s, border-color 0.5s ease;
+}
+
+.expand{
+  width: 0px;
+}
+
+#cvs {
+  background: black;
+  opacity: 0.1;
+}
+
+.button a{
+  text-align: center;
+  text-decoration: none;
+  font-family: pixel;
+  color:white;
+  position: absolute;
+  bottom: 0;
+  right: 20px;
+  padding:30px;
+  color:#f6f3e7;
+  -webkit-stroke-width: 2.3px;
+   -webkit-stroke-color: #FFFFFF;
+   -webkit-fill-color: #FFFFFF;
+   text-shadow: 1px 0px 10px #f6f3e7;
+   -webkit-transition: width 0.1s; /*Safari & Chrome*/
+   transition: width 0.1s;
+   -moz-transition: width 0.1s; /* Firefox 4 */
+   -o-transition: width 0.1s; /* Opera */
+   font-size: 12px;
+}
+
+.button a:hover{
+    -webkit-stroke-width: 4.3px;
+   -webkit-stroke-color: #FFFFFF;
+   -webkit-fill-color: #FFFFFF;
+   text-shadow: 1px 0px 20px #f6f3e7;
+   -webkit-transition: width 0.1s; /*Safari & Chrome*/
+   transition: width 0.1s;
+   -moz-transition: width 0.1s; /* Firefox 4 */
+   -o-transition: width 0.1s; /* Opera */
+  
+}
