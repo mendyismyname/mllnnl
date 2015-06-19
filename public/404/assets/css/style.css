@@ -122,6 +122,10 @@ img{
 }
 body.light{
     background:url(../img/happybday.gif) no-repeat center center fixed;
+      -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 
 }
 body.light #light{
