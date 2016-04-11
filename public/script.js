@@ -115,7 +115,7 @@ loop();
                     0: function() {
                         //Success message
                         $( ".contact" ).toggle();
-                        $( "a" ).html("Thank You");
+                        $( "a" ).html("Your request has been submitted");
                     },
                     200: function() {
                         //Success Message
