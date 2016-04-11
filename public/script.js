@@ -19,10 +19,10 @@ $('body').ready(function onOff() {
 $( "a" ).click(function() {
   $( ".contact" ).toggle();
 
-  if ($( this ).html() == "Close") {
+  if ($( this ).html() == "Return") {
     $( this ).html('Business is by invitation only.');
  } else {
-  $( this ).html('Close');
+  $( this ).html('Return');
 };
 });
 
@@ -134,3 +134,12 @@ loop();
                     return false;
                 });
             });
+
+
+
+
+
+
+
+            // particle.min.js hosted on GitHub
+// Scroll down for initialisation code

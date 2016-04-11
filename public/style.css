@@ -339,10 +339,12 @@ body {
 
 html {
   font-size: 62.5%;
+
 }
 
 body {
   font-family: 'Source Sans Pro', sans-serif;
+    overflow: hidden;
 }
 
 .container {
@@ -435,13 +437,16 @@ input[type=submit]:hover {
 
 .contact p{
   display: block;
+  letter-spacing: 1px;
+  opacity: .5;
   color:white;
   text-align: center;
-  font-size: 12pt;
+  font-size: 13pt;
+  font-weight: 500;
   text-transform: uppercase;
   color: white;
   width:350px;
-  margin: 50px auto;
-  margin-top: 100px;
+  margin: 20px auto;
+  margin-top: 180px;
 }
 
