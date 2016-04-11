@@ -120,7 +120,7 @@ loop();
                     200: function() {
                         //Success Message
                           $( ".contact" ).toggle();
-                        $( "a" ).html("Thank You");
+                        $( "a" ).html("Your request has been submitted");
 
                     }
                 }

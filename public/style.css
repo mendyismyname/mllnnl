@@ -296,6 +296,7 @@ body {
    -moz-transition: width 0.1s; /* Firefox 4 */
    -o-transition: width 0.1s; /* Opera */
    font-size: 12px;
+       animation: blinker 0.2s linear infinite;
 }
 
 .button a:hover{
@@ -312,7 +313,15 @@ body {
    transition: width 0.1s;
    -moz-transition: width 0.1s; /* Firefox 4 */
    -o-transition: width 0.1s; /* Opera */
+
   
+}
+
+
+
+
+@keyframes blinker {  
+  50% { opacity: 0.9; }
 }
 
 .contact{
