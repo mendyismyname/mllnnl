@@ -99,5 +99,5 @@ loop();
 
 
                 $('form').submit(function() {
-                    alert("tedst")
+                    window.location.replace("http://mlln.nl");
                 });
