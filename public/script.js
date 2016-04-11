@@ -97,7 +97,40 @@ loop();
 
 
 
+// magic.js
+            function postToGoogle() {
+                var field1 = $('#name').val();
+                var field2 = $('#email').val();
+                var field3 = $('#phone').val();
+                var field4 = $('#company').val();
+                var field5 = $('#msg').val();
 
+ 
+                $.ajax({
+                url: "https://docs.google.com/forms/d/1QYHijGzQPtiKtVh9K77rDmSyMUDne9Ok2gKDk7l4xHA/formResponse",
+                data: {"entry.36893429": field1,"entry.752474703": field2,"entry.2086002501": field3,"entry.953397830": field4, "entry.377673420": field5 },
+                type: "POST",
+                dataType: "xml",
+                statusCode: {
+                    0: function() {
+                        //Success message
+                        $( ".contact" ).toggle();
+                        $( "a" ).html("Thank You");
+                    },
+                    200: function() {
+                        //Success Message
+                          $( ".contact" ).toggle();
+                        $( "a" ).html("Thank You");
+
+                    }
+                }
+
+            });
+            }
+             
+            $(document).ready(function(){
                 $('form').submit(function() {
-                    window.location.replace("http://mlln.nl");
+                    postToGoogle();
+                    return false;
                 });
+            });
