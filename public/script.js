@@ -97,29 +97,7 @@ loop();
 
 
 
-// magic.js
-            function postToGoogle() {
-                var field3 = $('#feed').val();
- 
-                $.ajax({
-                url: "https://docs.google.com/forms/d/1QYHijGzQPtiKtVh9K77rDmSyMUDne9Ok2gKDk7l4xHA/formResponse",
-                data: {"entry.36893429": field3},
-                type: "POST",
-                dataType: "xml",
-                statusCode: {
-                    0: function() {
-                        //Success message
-                    },
-                    200: function() {
-                        //Success Message
-                    }
-                }
-            });
-            }
-             
-            $(document).ready(function(){
+
                 $('form').submit(function() {
-                    postToGoogle();
-                    return false;
+                    alert("tedst")
                 });
-            });
