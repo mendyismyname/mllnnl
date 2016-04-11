@@ -20,7 +20,7 @@ $( "a" ).click(function() {
   $( ".contact" ).toggle();
 
   if ($( this ).html() == "Close") {
-    $( this ).html('Business is by invite only.');
+    $( this ).html('Business is by invitation only.');
  } else {
   $( this ).html('Close');
 };
