@@ -3,6 +3,8 @@
     src: url(pixelmix.ttf);
 }
 
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700);
+
 
 .error{
   text-align: center;
@@ -273,15 +275,18 @@ body {
 }
 
 .button a{
+  z-index: 20;
   text-align: center;
   text-decoration: none;
-  font-family: pixel;
-  color:white;
+  font-weight: 200;
+  text-transform: uppercase;
+  font-family: helvetica;
+  color:grey;
   position: absolute;
   bottom: 0;
-  right: 20px;
+  left:0;
+  right:0;
   padding:30px;
-  color:#f6f3e7;
   -webkit-stroke-width: 2.3px;
    -webkit-stroke-color: #FFFFFF;
    -webkit-fill-color: #FFFFFF;
@@ -294,6 +299,11 @@ body {
 }
 
 .button a:hover{
+  color: white;
+     -webkit-transition: color 0.1s; /*Safari & Chrome*/
+   transition: color 0.1s;
+   -moz-transition: color 0.1s; /* Firefox 4 */
+   -o-transition: color 0.1s; /* Opera */
     -webkit-stroke-width: 4.3px;
    -webkit-stroke-color: #FFFFFF;
    -webkit-fill-color: #FFFFFF;
@@ -304,3 +314,129 @@ body {
    -o-transition: width 0.1s; /* Opera */
   
 }
+
+.contact{
+  display: none;
+  z-index: 10;
+  position: absolute;
+  right: 0;
+  left: 0;
+  top:0;
+  bottom: 0;
+  min-width: 100%;
+  min-height:100%;
+  background-color: rgba(0,0,0,0.9);
+}
+
+
+
+
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700);
+/* VARS */
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 700px;
+}
+
+form {
+  margin: 2rem 0;
+}
+form:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+form .field {
+  display: block;
+  border: 1px solid #BDBDBD;
+  float: left;
+  width: 100%;
+}
+form .field.tnb {
+  border-top: 0;
+}
+form .field.half {
+  width: 50%;
+}
+form .field.last {
+  border-left: 0;
+}
+form .field label {
+  display: block;
+  font-size: 1.2rem;
+  padding: 1.5rem 2rem 0;
+  text-transform: uppercase;
+  color: #999;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+form .field input,
+form .field select,
+form .field textarea {
+  display: block;
+  width: 100%;
+  padding: .5rem 2rem 1.5rem;
+  font-size: 1.8rem;
+  border: 0;
+  color: white;
+  outline: 0;
+    background-color: rgba(0,0,0,0);
+}
+form .field input[type=submit] {
+  width: 500px;
+    background-color: rgba(0,0,0,0);
+  color: white;
+}
+form .field select {
+  height: 41px;
+  padding: 40px;
+  width: 90%;
+  margin-left: 15px;
+  color: white;
+}
+form .field textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  display: block;
+  width: 100%;
+  padding: 1.5rem 1.5rem 1.5rem;
+  font-size: 1.8rem;
+  border: 0;
+  color: white;
+  outline: 0;
+  border: 1px solid #BDBDBD;
+  border-top: 0px;
+  background-color: rgba(0,0,0,0);
+}
+
+input[type=submit]:hover {
+  background-color: white;
+  -webkit-transition: background-color 500ms linear;
+  -moz-transition: background-color 500ms linear;
+  -o-transition: background-color 500ms linear;
+  -ms-transition: background-color 500ms linear;
+  color: black;
+}
+
+.contact img{
+  display: block;
+  width:150px;
+  margin: 50px auto;
+  margin-top: 100px;
+}
+
