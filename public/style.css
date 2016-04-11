@@ -433,9 +433,14 @@ input[type=submit]:hover {
   color: black;
 }
 
-.contact img{
+.contact p{
   display: block;
-  width:150px;
+  color:white;
+  text-align: center;
+  font-size: 12pt;
+  text-transform: uppercase;
+  color: white;
+  width:350px;
   margin: 50px auto;
   margin-top: 100px;
 }
