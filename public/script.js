@@ -19,10 +19,10 @@ $('body').ready(function onOff() {
 $( "a" ).click(function() {
   $( ".contact" ).toggle();
 
-  if ($( this ).html() == "Close") {
-    $( this ).html('Business is by invite only.');
+  if ($( this ).html() == "Return") {
+    $( this ).html('Business is by invitation only.');
  } else {
-  $( this ).html('Close');
+  $( this ).html('Return');
 };
 });
 
@@ -98,37 +98,48 @@ loop();
 
 
 // magic.js
-$(document).ready(function() {
+            function postToGoogle() {
+                var field1 = $('#name').val();
+                var field2 = $('#email').val();
+                var field3 = $('#phone').val();
+                var field4 = $('#company').val();
+                var field5 = $('#msg').val();
 
-    // process the form
-    $('form').submit(function(event) {
+ 
+                $.ajax({
+                url: "https://docs.google.com/forms/d/1QYHijGzQPtiKtVh9K77rDmSyMUDne9Ok2gKDk7l4xHA/formResponse",
+                data: {"entry.36893429": field1,"entry.752474703": field2,"entry.2086002501": field3,"entry.953397830": field4, "entry.377673420": field5 },
+                type: "POST",
+                dataType: "xml",
+                statusCode: {
+                    0: function() {
+                        //Success message
+                        $( ".contact" ).toggle();
+                        $( "a" ).html("Your request has been submitted");
+                    },
+                    200: function() {
+                        //Success Message
+                          $( ".contact" ).toggle();
+                        $( "a" ).html("Your request has been submitted");
 
-        // get the form data
-        // there are many ways to get this data using jQuery (you can use the class or id also)
-        var formData = {
-            'name'              : $('input[name=name]').val(),
-            'email'             : $('input[name=email]').val(),
-        };
+                    }
+                }
 
-        // process the form
-        $.ajax({
-            type        : 'POST', // define the type of HTTP verb we want to use (POST for our form)
-            url         : 'process.php', // the url where we want to POST
-            data        : formData, // our data object
-            dataType    : 'json', // what type of data do we expect back from the server
-                        encode          : true
-        })
-            // using the done promise callback
-            .done(function(data) {
-
-                // log data to the console so we can see
-                console.log(data); 
-
-                // here we will handle errors and validation messages
+            });
+            }
+             
+            $(document).ready(function(){
+                $('form').submit(function() {
+                    postToGoogle();
+                    return false;
+                });
             });
 
-        // stop the form from submitting the normal way and refreshing the page
-        event.preventDefault();
-    });
 
-});
+
+
+
+
+
+            // particle.min.js hosted on GitHub
+// Scroll down for initialisation code
